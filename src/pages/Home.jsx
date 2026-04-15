@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import ToolsCards from '../components/ToolsCards'
 import { Link } from 'react-router-dom'
+import qrGeneratorImage from '../assets/tool_images/qr-generator.png'
+import barcodeGeneratorImage from '../assets/tool_images/barcode-generator.png'
+import jsonFormatterImage from '../assets/tool_images/json-formatter.png'
+import pdfMErgerImage from '../assets/tool_images/pdf-merger.png' 
 
 function Home() {
   let [searchTerm, setSearchTerm] = useState("")
@@ -10,29 +14,28 @@ function Home() {
   const handleSearchSubmit = (e) => {
     e.preventDefault()
     // Implement search functionality here
-    console.log("Searching for:", searchTerm)
   }
 
   let tools = [
     {
       name: "QR Generator",
       description: "Generate QR codes from any text or url",
-      image: "src/assets/tool_images/qr-generator.png"
+      image: qrGeneratorImage
     },
     {
       name: "Barcode Generator",
       description: "Generate barcode from any text",
-      image: "src/assets/tool_images/barcode-generator.png"
+      image: barcodeGeneratorImage
     },
     {
       name: "JSON Tool",
       description: "A simple JSON formatting tool",
-      image: "src/assets/tool_images/json-formatter.png"
+      image: jsonFormatterImage
     },
     {
       name: "PDF Merger",
       description: "Merge multiple PDF files into one",
-      image: "src/assets/tool_images/pdf-merger.png"
+      image: pdfMErgerImage
     }
 
   ]
@@ -41,7 +44,8 @@ function Home() {
     : tools.filter((tool) => {
       const searchWords = searchTerm.toLowerCase().trim().split(/\s+/);
       return searchWords.every(word =>
-        tool.name.toLowerCase().includes(word)
+        tool.name.toLowerCase().includes(word) ||
+        tool.description.toLowerCase().includes(word)
       );
     });
 
@@ -64,7 +68,6 @@ function Home() {
         ))}
       </div>
 
-
       {/* search */}
       <div className='mt-8 border border-gray-300 rounded-md p-2 flex gap-2 items-center bg-white shadow-sm'>
         {/* flex-grow (or flex-1) makes the input fill all available space */}
@@ -73,7 +76,6 @@ function Home() {
           className="w-full sm:flex-[4] p-2 outline-none text-[#516078] placeholder:text-gray-400"
           placeholder="Search for tools..." onChange={handleSearchChange}
         />
-
         {/* flex-1 makes the button take up the remaining 1 part of the 5 total parts */}
         <button className="w-full sm:flex-1 bg-[#516078] text-white py-2 px-4 rounded-md hover:bg-opacity-90 transition-all font-medium" onClick={handleSearchSubmit}>
           Search
