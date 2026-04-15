@@ -1,14 +1,14 @@
 import React from 'react'
 
 function ToolsCards(props) {
-    const { toolName, toolDescription } = props
+    const { toolName, toolDescription, image } = props
   return (
    <div className="flex flex-col h-full rounded-xl border border-gray-200 bg-white overflow-hidden hover:shadow-md transition-shadow">
       
       {/* Image Container */}
       <div className="w-full aspect-video overflow-hidden">
         <img 
-          src="https://placehold.co/400" 
+          src={image}
           className="w-full h-full object-cover" 
           alt={toolName} 
         />
