@@ -16,20 +16,20 @@ const Header = () => {
   );
 
   return (
-    <header className="w-full bg-blue-200 border-b border-gray-100 sticky top-0 z-50">
+    <header className="w-full bg-blue-950/80 border-b border-gray-100 top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
         
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <div className="bg-blue-600 text-white w-8 h-8 flex items-center justify-center rounded font-bold">A</div>
-          <h1 className="text-xl font-black tracking-tight uppercase">Ace<span className="text-blue-600">Stuffs</span></h1>
+          <div className="bg-orange-600 text-white w-8 h-8 flex items-center justify-center rounded font-bold">A</div>
+          <h1 className="text-xl text-white font-black tracking-tight uppercase truncate">Ace<span className="text-blue-600 text-orange-600">Stuffs</span></h1>
         </Link>
 
         {/* Hamburger Button (Only visible on mobile) */}
         <div className="md:hidden">
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-gray-600 focus:outline-none"
+            className="p-2 text-white focus:outline-none"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
