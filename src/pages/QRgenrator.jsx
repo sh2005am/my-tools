@@ -1,8 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import QRCode from "qrcode";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function QRGenerator() {
+  useEffect(() => {
+    document.title = "Free QR Code Generator - acestuffs";
+  }, []);
+  
   const [text, setText] = useState("");
   const [isGenerated, setIsGenerated] = useState(false);
   const canvasRef = useRef(null);
