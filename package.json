@@ -46,6 +46,7 @@
     "/qr-generator",
     "/barcode-generator",
     "/pdf-merger"
-  ]
+  ],
+  "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
 }
 }
