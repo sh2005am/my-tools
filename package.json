@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
+    "pdf-lib": "^1.17.1",
     "qrcode": "^1.5.4",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
@@ -35,18 +36,21 @@
     "vite": "^8.0.4"
   },
   "reactSnap": {
-  "source": "dist",
-  "minifyHtml": {
-    "collapseWhitespace": false,
-    "removeComments": false
-  },
-  "include": [
-   "/",
-    "/json-tool",
-    "/qr-generator",
-    "/barcode-generator",
-    "/pdf-merger"
-  ],
-  "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
-}
+    "source": "dist",
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    },
+    "include": [
+      "/",
+      "/json-tool",
+      "/qr-generator",
+      "/barcode-generator",
+      "/pdf-merger"
+    ],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
+  }
 }
