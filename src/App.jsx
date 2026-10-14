@@ -3,6 +3,7 @@ import { Routes, Route, Link} from 'react-router-dom'
 import Home from './pages/Home'
 import JsonTool from './pages/JsonTool'
 import QRgenrator from './pages/QRgenrator'
+import PdfSplitter from './pages/PdfSplitter'
 import BarcodeGen from './pages/BarcodeGen'
 import PdfMerger from './pages/PdfMerger'
 import './App.css'
@@ -26,6 +27,7 @@ function App() {
           <Route path="/qr-generator" element={<QRgenrator />} />
           <Route path="/barcode-generator" element={<BarcodeGen />} />
           <Route path="/pdf-merger" element={<PdfMerger />} />
+          <Route path="/pdf-splitter" element={<PdfSplitter />} />
         </Routes>
       </main>
 

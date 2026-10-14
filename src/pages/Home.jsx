@@ -5,6 +5,7 @@ import qrGeneratorImage from '../assets/tool_images/qr-generator.png'
 import barcodeGeneratorImage from '../assets/tool_images/barcode-generator.png'
 import jsonFormatterImage from '../assets/tool_images/json-formatter.png'
 import pdfMErgerImage from '../assets/tool_images/pdf-merger.png' 
+import pdfSplitterImage from '../assets/tool_images/pdf-splitter.png'
 
 function Home() {
   let [searchTerm, setSearchTerm] = useState("")
@@ -36,6 +37,11 @@ function Home() {
       name: "PDF Merger",
       description: "Merge multiple PDF files into one",
       image: pdfMErgerImage
+    },
+    {
+      name: "PDF Splitter",
+      description: "Split a PDF file into multiple files",
+      image: pdfSplitterImage
     }
 
   ]
