@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PDFDocument } from 'pdf-lib';
+import { Helmet } from 'react-helmet-async';
 
 export default function PdfSplitter() {
   const [pdfFile, setPdfFile] = useState(null);
@@ -87,6 +88,12 @@ export default function PdfSplitter() {
   };
 
   return (
+  <>
+    <Helmet>
+      <title>Free PDF Splitter - Split PDF Files Online</title>
+      <meta name="description" content="Split your PDF files easily and securely. Upload a PDF, select the pages you want to extract, and download the new PDF instantly." />
+      <link rel="canonical" href="https://tools.acestuffs.in/pdf-splitter" />
+    </Helmet>
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       <div className="text-center">
         <h1 className="text-3xl font-bold text-gray-800 dark:text-white">PDF Splitter</h1>
@@ -184,5 +191,6 @@ export default function PdfSplitter() {
         </div>
       )}
     </div>
+    </>
   );
 }

@@ -6,6 +6,7 @@ import barcodeGeneratorImage from '../assets/tool_images/barcode-generator.png'
 import jsonFormatterImage from '../assets/tool_images/json-formatter.png'
 import pdfMErgerImage from '../assets/tool_images/pdf-merger.png' 
 import pdfSplitterImage from '../assets/tool_images/pdf-splitter.png'
+import { Helmet } from 'react-helmet-async';
 
 function Home() {
   let [searchTerm, setSearchTerm] = useState("")
@@ -56,6 +57,12 @@ function Home() {
     });
 
   return (
+      <>
+      <Helmet>
+        <title>My Tools - Free Online Developer & PDF Utilities</title>
+        <meta name="description" content="A collection of free, secure, browser-based tools including PDF splitters, mergers, QR code generators, and JSON formatters. Works 100% offline." />
+        <link rel="canonical" href="https://yourdomain.com/" />
+      </Helmet>
     <div className="max-w-7xl mx-auto px-4 py-8">
       <h2 className="text-center mb-8 text-s sm:text-2xl md:text-3xl font-bold">
         Choose one of our tools to start with
@@ -100,6 +107,7 @@ function Home() {
         ))}
       </div>
     </div>
+    </>
   )
 }
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PDFDocument } from 'pdf-lib';
+import { Helmet } from 'react-helmet-async';
 
 function PdfMerger() {
   const [files, setFiles] = useState([]);
@@ -61,7 +62,12 @@ function PdfMerger() {
     }
   };
 
-  return (
+  return (<>
+  <Helmet>
+        <title>Free PDF Merger - Merge PDF Files Online</title>
+        <meta name="description" content="Merge multiple PDF files into a single document instantly. Secure, fast, and completely in your browser." />
+        <link rel="canonical" href="https://tools.acestuffs.in/pdf-merger" />
+      </Helmet>
     <main class="flex-grow">
       {/* Main Tool Container */}
       <div className="flex justify-center items-center min-h-[80vh] py-10">
@@ -179,6 +185,7 @@ function PdfMerger() {
         </div>
       </div>
     </main>
+    </>
   );
 }
 

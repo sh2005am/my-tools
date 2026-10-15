@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import QRCode from "qrcode";
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from 'react-helmet-async';
 
 export default function QRGenerator() {
   useEffect(() => {
@@ -44,7 +45,13 @@ export default function QRGenerator() {
 
   return (
     <>
+      <Helmet>
+        <title>Free QR Code Generator - acestuffs</title>
+        <meta name="description" content="Generate QR codes instantly for free. Enter any text, URL, or data and download your QR code in seconds." />
+        <link rel="canonical" href="https://tools.acestuffs.in/qr-generator" />
+      </Helmet>
       <div className="flex justify-center items-center min-h-screen">
+
         <Toaster position="top-center" />
         <div className="bg-slate-900 p-6 rounded-2xl shadow-md w-full max-w-md text-center">
 
