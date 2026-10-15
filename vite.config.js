@@ -14,7 +14,6 @@ export default defineConfig({
     sitemap({
       hostname: 'https://tools.acestuffs.in', // Your live domain
       dynamicRoutes: [
-        '/',
         '/json-tool',
         '/qr-generator',
         '/barcode-generator',
